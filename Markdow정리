@@ -1,0 +1,100 @@
+<!--Heading-->
+# 제목 1
+## 제목글자크기 2
+### 제목글자크기 3
+#### 제목글자크기 4
+##### 제목글자크기 5
+###### 제목글자크기 6
+
+<br>    줄바꿈하기
+
+___     (언더스코어3번) 라인추가
+
+
+**bold**   글자 볼드 처리
+
+
+*italic*   이탈릭글씨체처리
+
+
+~~strikethrough~~ 스트라이크쓰루
+
+
+> 원하는 문장 인용구안에 넣기
+
+
+
+Bullet list 만들기(* 또는 - 사용)
+* 첫번째.
+* 두번째.
+
+
+
+숫자목록만들기(1. 2. 3...)
+1. first
+2. second
+3. third
+
+
+
+클릭가능한 링크 만들기
+
+Click [here](https://github.com/junseok1925)
+
+
+
+이미지 추가하기
+
+![이미지 설명](https://blog.kakaocdn.net/dn/bLfdTi/btrSwTgWUPu/DlSMrRjCvfHcqKjkDFYcH0/img.gif)
+
+
+
+테이블 만들기
+
+|Header|Description|
+|--|--|
+|내용1|내용2|
+|내용1|내용2|
+|내용1|내용2|
+|내용1|내용2|
+
+오른쪽 정렬 
+|Header|Description|
+|--:|--:|
+|내용1|내용2|
+|내용1|내용2|
+|내용1|내용2|
+|내용1|내용2|
+
+왼쪽으로 정렬
+|Header|Description|
+|:--|:--|
+|내용1|내용2|
+|내용1|내용2|
+|내용1|내용2|
+|내용1|내용2|
+
+가운데 정렬
+|Header|Description|
+|:--:|:--:|
+|내용1|내용2|
+|내용1|내용2|
+|내용1|내용2|
+|내용1|내용2|
+
+
+작성한 코드 강조해서 보여주기(가독성)
+
+`` (백틱키)
+` System.out.println("Hello"); `
+
+``` (코드블럭 생성)
+System.out.println("Hello");
+```
+
+``` java (코드블럭 생성,하이라이트)
+System.out.println("Hello");
+```
+
+
+
