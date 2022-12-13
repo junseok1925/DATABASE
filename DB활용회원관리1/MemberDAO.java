@@ -1,4 +1,4 @@
-package DB활용01;
+package DB활용회원관리1;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
