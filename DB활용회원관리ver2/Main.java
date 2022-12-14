@@ -1,10 +1,10 @@
 package DB활용회원관리ver2;
 
-//메인실행클래스
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
+import DB활용회원관리ver2.MemberVO;
 
 public class Main {
 
@@ -37,6 +37,32 @@ public class Main {
 					System.out.println("이름 : " + list.get(i).getName() + "\t");
 
 				}
+				break;
+
+			case 2:
+				MemberVO vo = new MemberVO();
+				System.out.println("회원 등록을 시작합니다.");
+				System.out.print("회원 번호 : ");
+				vo.setMemberno(sc.nextInt());
+				System.out.print("회원 아이디 : ");
+				vo.setId(sc.next());
+				System.out.print("회원 이름 : ");
+				vo.setName(sc.next());
+
+				dao.insert(vo);
+				break;
+
+			case 3:
+				MemberVO uvo = new MemberVO();
+				System.out.println("회원 정보 업데이트를 시작합니다.");
+				System.out.print("수정할 회원 번호 : ");
+				uvo.setMemberno(sc.nextInt());
+				System.out.print("변경할 새로운 회원 아이디 : ");
+				uvo.setId(sc.next());
+				System.out.print("변경할 새로운 회원 이름 : ");
+				uvo.setName(sc.next());
+
+				dao.update(uvo);
 				break;
 
 			}
