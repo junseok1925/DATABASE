@@ -1,4 +1,6 @@
-package DB활용회원관리2;
+package DB활용회원관리ver2;
+
+// 데이터 임시 저장 공용 클래스
 
 public class MemberVO {
 
