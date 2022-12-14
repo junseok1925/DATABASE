@@ -79,4 +79,26 @@ public class MemberDAO {
 		}
 	}
 
+/* ====================회원정보 수정 업데이트============= */
+
+	public void update(MemberVO vo) {
+		try {
+			String sql = "update member set id=?,name=? where memberno=?";
+
+			pstmt = conn.prepareStatement(sql);
+
+			pstmt.setString(1, vo.getId());
+			pstmt.setString(2, vo.getName());
+			pstmt.setInt(3, vo.getMemberno());
+
+			rs = pstmt.executeQuery();
+			System.out.println("회원 정보 업데이트 성공!");
+
+		} catch (Exception e) {
+			System.out.println("회원 정보 업데이트 실패!");
+			e.printStackTrace();
+		}
+
+	}
+	
 }
