@@ -65,6 +65,13 @@ public class Main {
 				dao.update(uvo);
 				break;
 
+				case 4:
+
+				System.out.println("회원 정보 삭제를 시작합니다.");
+				System.out.print("삭제할 회원 번호 : ");
+				dao.delete(sc.nextInt());
+				break;
+
 			}
 
 		}
