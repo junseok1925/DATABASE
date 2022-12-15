@@ -100,5 +100,27 @@ public class MemberDAO {
 		}
 
 	}
+
+		/* ====================회원정보 삭제===================== */
+
+		public void delete(int no) {
+			try {
+				String sql = "delete from member where memberno=?";
+	
+				pstmt = conn.prepareStatement(sql); // 데이터 베이스로 sql를 보냄 sql은 위에 입력된 코드
+	
+				pstmt.setInt(1,no);
+	
+				rs = pstmt.executeQuery(); // 데이터베이스에서 값을 가져옴
+	
+				System.out.println("회원 정보 삭제 성공!");
+	
+			} catch (Exception e) {
+				System.out.println("회원 정보 삭제 실패!");
+				e.printStackTrace();
+			}
+	
+		}
+	
 	
 }
