@@ -121,6 +121,108 @@ public class MemberDAO {
 			}
 	
 		}
+
+		/* ====================회원번호로 회원정보 조회===================== */
+
+	/* ======번호로 검색하기====== */
+	
+	public List<MemberVO> selectNo(int no) {
+
+		List<MemberVO> list = new ArrayList<>(); // 검색된 결과를 저장하는 객체 저장
+
+		try {
+			String sql = "select*from member where memberno=? ";
+
+			pstmt = conn.prepareStatement(sql); // 데이터 베이스로 sql를 보냄 sql은 위에 입력된 코드
+
+			pstmt.setInt(1, no);
+
+			rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+				MemberVO vo = new MemberVO();
+
+				vo.setMemberno(rs.getInt("memberno"));
+				vo.setId(rs.getString("id"));
+				vo.setName(rs.getString("name"));
+
+				list.add(vo);
+			}
+			System.out.println("회원 정보 조회 성공!");
+		} catch (Exception e) {
+			System.out.println("회원 정보 조회 실패!");
+			e.printStackTrace();
+		}
+		return list;
+
+	}
+	
+	/* ======이름으로 검색하기====== */
+
+	public List<MemberVO> selectName(String name) {
+
+		List<MemberVO> list = new ArrayList<>(); // 검색된 결과를 저장하는 객체 저장
+
+		try {
+			String sql = "select*from member where name=? ";
+
+			pstmt = conn.prepareStatement(sql); // 데이터 베이스로 sql를 보냄 sql은 위에 입력된 코드
+
+			pstmt.setString(1, name);
+
+			rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+				MemberVO vo = new MemberVO();
+
+				vo.setMemberno(rs.getInt("memberno"));
+				vo.setId(rs.getString("id"));
+				vo.setName(rs.getString("name"));
+
+				list.add(vo);
+			}
+			System.out.println("회원 정보 조회 성공!");
+		} catch (Exception e) {
+			System.out.println("회원 정보 조회 실패!");
+			e.printStackTrace();
+		}
+		return list;
+
+	}
+	
+	
+	/* ======아이디으로 검색하기====== */
+
+	public List<MemberVO> selectId(String id) {
+
+		List<MemberVO> list = new ArrayList<>(); // 검색된 결과를 저장하는 객체 저장
+
+		try {
+			String sql = "select*from member where id=? ";
+
+			pstmt = conn.prepareStatement(sql); // 데이터 베이스로 sql를 보냄 sql은 위에 입력된 코드
+
+			pstmt.setString(1, id);
+
+			rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+				MemberVO vo = new MemberVO();
+
+				vo.setMemberno(rs.getInt("memberno"));
+				vo.setId(rs.getString("id"));
+				vo.setName(rs.getString("name"));
+
+				list.add(vo);
+			}
+			System.out.println("회원 정보 조회 성공!");
+		} catch (Exception e) {
+			System.out.println("회원 정보 조회 실패!");
+			e.printStackTrace();
+		}
+		return list;
+
+	}
 	
 	
 }
