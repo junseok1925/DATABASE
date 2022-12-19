@@ -72,9 +72,77 @@ public class Main {
 				dao.delete(sc.nextInt());
 				break;
 
+				case 5: // 조회
+
+				System.out.println("회원 정보를 조회합니다.");
+				System.out.println("조회할 방법 선택 [ 1.번호  2.이름  3.아이디 ]");
+				int s = sc.nextInt();
+
+				if (s == 1) {
+					System.out.println("조회할 회원 번호 : ");
+					List<MemberVO> sList = dao.selectNo(sc.nextInt());
+
+					if (sList.isEmpty()) {
+						System.out.println("해당 회원은 없습니다.");
+					} else {
+
+						for (int i = 0; i < sList.size(); i++) {
+
+							System.out.print("번호 : " + sList.get(i).getMemberno() + "\t");
+							System.out.print("아이디 : " + sList.get(i).getId() + "\t");
+							System.out.println("이름 : " + sList.get(i).getName());
+
+						}
+					}
+
+				}
+
+				else if (s == 2) {
+					System.out.println("조회할 회원 이름 : ");
+					List<MemberVO> sList = dao.selectName(sc.next());
+
+					if (sList.isEmpty()) {
+						System.out.println("해당 회원은 없습니다.");
+					} else {
+
+						for (int i = 0; i < sList.size(); i++) {
+
+							System.out.print("번호 : " + sList.get(i).getMemberno() + "\t");
+							System.out.print("아이디 : " + sList.get(i).getId() + "\t");
+							System.out.println("이름 : " + sList.get(i).getName());
+
+						}
+					}
+
+				}
+				
+				else if (s == 3) {
+					System.out.println("조회할 회원 아이디 : ");
+					List<MemberVO> sList = dao.selectId(sc.next());
+
+					if (sList.isEmpty()) {
+						System.out.println("해당 회원은 없습니다.");
+					} else {
+
+						for (int i = 0; i < sList.size(); i++) {
+
+							System.out.print("번호 : " + sList.get(i).getMemberno() + "\t");
+							System.out.print("아이디 : " + sList.get(i).getId() + "\t");
+							System.out.println("이름 : " + sList.get(i).getName());
+
+						}
+					}
+
+				}
+
+				break;
+
+			default:
+				System.out.println("잘못 입력하셨습니다.");
 			}
 
 		}
 
 	}
+
 }
