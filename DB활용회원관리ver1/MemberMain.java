@@ -1,4 +1,4 @@
-package DB활용회원관리1;
+package DB활용회원관리ver1;
 
 import java.util.List;
 
